@@ -154,7 +154,7 @@ async function parseAppAndInsertToDB(file, user, team) {
         await app.save()
         info.uploader = user.username;
         info.uploaderId = user._id;
-        info.size = fs.statSync(fileRealPath).size
+        info.size = file.size;
         var version = Version(info)
         version.md5 = filemd5
         version.appId = app._id;
