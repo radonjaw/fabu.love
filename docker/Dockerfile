@@ -20,10 +20,10 @@ ADD server /opt/server
 RUN cnpm install
 
 # 增加前端页面到server
-# ADD client/dist /opt/web
-# ADD docker/nginx/fabulove.conf /etc/nginx/conf.d/fabulove.conf
+ADD client/dist /opt/web
+ADD docker/nginx/fabulove.conf /etc/nginx/conf.d/fabulove.conf
 
 EXPOSE 9898
 
-# ENTRYPOINT ["/opt/server/docker-entrypoint.sh"]
+ENTRYPOINT ["/opt/server/docker-entrypoint.sh"]
 CMD ["npm", "start"]
