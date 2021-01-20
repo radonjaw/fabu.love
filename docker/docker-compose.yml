@@ -5,7 +5,7 @@ services:
     container_name: mongo
     image: mongo
     volumes:
-      - ./data:/data/db
+      - /fabu.love/docker/data/mongodb/db:/data/db   #相对路径修改为绝对路径
     ports:
       - "27017:27017"
     networks:
@@ -18,11 +18,11 @@ services:
     environment:
       FABU_DB_HOST: mongo
       FABU_BASE_URL: https://app.huanlema.ml 正式环境部署请打开注释，并修改为域名为自己的域名
-      FABU_UPLOAD_DIR: /fabu/upload
+      FABU_UPLOAD_DIR: /fabu.love/upload
     ports: 
       - "9898:9898"
     volumes:
-      - ./upload:/fabu/upload
+      - ./upload:/fabu.love/upload
     depends_on:
       - mongo
     networks:
