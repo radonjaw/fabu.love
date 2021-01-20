@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "fabu",
+      "name": "fabu.love",
       "script": "index.js",
       "watch": true,
       "exec_interpreter": "babel-node",
