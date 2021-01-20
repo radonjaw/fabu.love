@@ -1,4 +1,5 @@
-FROM node:10.15.3
+#node版本号 10.15.3-->9.11.2
+FROM node:9.11.2
 
 # 安装依赖库
 RUN npm install -g babel-cli \
@@ -20,8 +21,8 @@ ADD server /opt/server
 RUN cnpm install
 
 # 增加前端页面到server
-ADD client/dist /opt/web
-ADD docker/nginx/fabulove.conf /etc/nginx/conf.d/fabulove.conf
+#ADD client/dist /opt/web
+#ADD docker/nginx/fabulove.conf /etc/nginx/conf.d/fabulove.conf
 
 EXPOSE 9898
 
