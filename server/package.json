@@ -1,5 +1,5 @@
 {
-    "name": "fabu",
+    "name": "fabu.love",
     "version": "1.0.0",
     "description": "Hello Koa 2 example with async",
     "main": "index.js",
